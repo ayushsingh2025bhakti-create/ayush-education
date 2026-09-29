@@ -1,124 +1,111 @@
 <!doctype html>
-<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6d4aff"><title>Ayush Education</title>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#7046ff">
+<title>Ayush Education</title>
+<link rel="manifest" href="manifest.webmanifest">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#080817;color:#fff}
-.app{max-width:520px;margin:auto;min-height:100vh;background:linear-gradient(160deg,#0a0920,#17113b 48%,#08182c);padding-bottom:82px}
-header{padding:24px 18px 22px;background:linear-gradient(135deg,#6139ff,#a14fff 55%,#00c8ff);border-radius:0 0 30px 30px;box-shadow:0 12px 45px #633cff66}
-.brand{font-size:27px;font-weight:900}.sub{font-size:13px;opacity:.9;margin-top:3px}
-.search{margin-top:17px;background:#ffffff20;border:1px solid #ffffff35;padding:13px 15px;border-radius:17px;backdrop-filter:blur(15px);color:#eee}
-.page{display:none;padding:0 18px}.page.active{display:block}
-.hero{margin-top:18px;padding:20px;border-radius:23px;background:linear-gradient(135deg,#24164e,#5431a3);box-shadow:0 15px 40px #0006;border:1px solid #ffffff18}
-.hero b{font-size:20px}.hero p{font-size:13px;color:#d8d4e8;margin:7px 0 13px}
-.btn{border:0;border-radius:13px;padding:10px 14px;background:#fff;color:#5538c8;font-weight:800}
-h2{font-size:19px;margin:21px 0 12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{min-height:120px;padding:16px;border-radius:20px;background:linear-gradient(145deg,#ffffff18,#ffffff08);border:1px solid #ffffff18;box-shadow:0 10px 30px #0004;backdrop-filter:blur(15px);color:white}
-.card:active{transform:scale(.98)}.icon{font-size:29px}.title{font-weight:850;margin-top:7px}.muted{font-size:12px;color:#bdb9ce;margin-top:4px}
-.item{padding:16px;border-radius:18px;background:#ffffff10;border:1px solid #ffffff15;margin-bottom:11px}.tag{font-size:10px;font-weight:800;color:#c8b9ff;letter-spacing:.4px}.item h3{margin:7px 0;font-size:16px}.item p{color:#d0ccdc;font-size:13px;line-height:1.55}.source{font-size:10px;color:#8f89a4;margin-top:10px}
-.back{margin-top:17px;border:0;border-radius:12px;padding:9px 13px;background:#ffffff15;color:#fff}
-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);height:72px;background:#0d0c20ee;border-top:1px solid #ffffff18;backdrop-filter:blur(20px);display:flex;justify-content:space-around;align-items:center;z-index:20}
-.nav{border:0;background:none;color:#999;font-size:10px}.nav span{display:block;font-size:23px}.nav.active{color:#fff;filter:drop-shadow(0 0 7px #8d70ff)}
-.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%) translateY(20px);background:#fff;color:#222;padding:11px 15px;border-radius:13px;opacity:0;pointer-events:none;transition:.25s;z-index:30;font-size:13px;box-shadow:0 8px 30px #0006;max-width:90%}.toast.show{opacity:1;transform:translateX(-50%)}
-</style></head><body><div class="app">
-<header><div class="brand">🎓 Ayush Education</div><div class="sub">Smart • Modern • Exam Preparation</div>
-<div class="search" id="search">🔎 Current Affairs, Quiz, Subject खोजें...</div></header>
+*{box-sizing:border-box}body{margin:0;background:#090b24;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:82px}
+a{text-decoration:none;color:inherit}.hero{padding:38px 20px 30px;border-radius:0 0 34px 34px;background:linear-gradient(135deg,#6840ff,#a83cff 50%,#08c8ef);box-shadow:0 18px 50px #4320a955}
+.brand{font-size:35px;font-weight:900}.tag{font-size:18px;margin-top:2px}.search{margin-top:22px;padding:17px 18px;border:1px solid #ffffff55;border-radius:20px;background:#ffffff16;font-size:18px}
+.wrap{max-width:900px;margin:auto;padding:20px 18px}.page{display:none}.page.active{display:block}.hero-card,.card,.subject,.short-card{background:linear-gradient(145deg,#2d2858ee,#161832f5);border:1px solid #ffffff18;border-radius:26px;box-shadow:0 12px 30px #0003}
+.hero-card{padding:24px;margin-bottom:25px}.hero-card h2{margin:0 0 8px;font-size:27px}.hero-card p,.card p,.subject p,.short-body p{color:#c4c0d2;line-height:1.55}
+h2.section{font-size:27px;margin:25px 2px 14px}.grid,.subjects{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card,.subject{padding:20px;min-height:145px}.icon{font-size:38px}.card h3,.subject h3{font-size:21px;margin:9px 0 4px}
+.btn{display:inline-block;background:#fff;color:#5535b8;font-weight:800;padding:12px 18px;border-radius:15px;margin-top:12px;border:0}.back{display:inline-block;background:#ffffff12;padding:12px 17px;border-radius:15px;margin-bottom:12px}
+.item{margin:14px 0;min-height:auto}.eyebrow,.short-body small{color:#bcb0ff;font-weight:800;letter-spacing:.7px}.item h3{font-size:21px}.answer{display:none;margin-top:12px;padding:12px;border-radius:14px;background:#36d78420;color:#aaffcf}.quiz-options div{margin:8px 0;color:#d5d1df}
+.short-card{overflow:hidden;margin:16px 0;display:grid;grid-template-columns:40% 60%}.thumb{position:relative;min-height:220px;background:#111}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.thumb span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#7046ffdd;font-size:22px;box-shadow:0 0 25px #7046ff}.short-body{padding:22px}.short-body h3{font-size:23px;margin:8px 0}.bottom{position:fixed;bottom:0;left:0;right:0;height:76px;background:#090a20ee;backdrop-filter:blur(18px);border-top:1px solid #ffffff14;display:grid;grid-template-columns:repeat(5,1fr);z-index:10}.nav{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#999;font-size:12px;gap:4px}.nav b{font-size:23px}.nav.active{color:#fff;text-shadow:0 0 15px #8a68ff}.ai{position:fixed;right:0;top:155px;width:58px;height:58px;border-radius:22px 0 0 22px;background:#ffffffdd;color:#111;display:grid;place-items:center;font-size:27px;z-index:11}
+@media(max-width:650px){.short-card{grid-template-columns:1fr}.thumb{height:215px}.brand{font-size:33px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="brand">🎓 Ayush Education</div><div class="tag">Smart • Modern • Exam Preparation</div><div class="search">🔎 Current Affairs, Quiz, Subject खोजें...</div></header>
+<main class="wrap">
 
 <section id="home" class="page active">
-<div class="hero"><b>आज की तैयारी शुरू करें 🚀</b><p>29 September 2026 • Current Affairs + Quiz + Lectures + Shorts</p><button class="btn" data-page="current">आज का Current Affairs →</button></div>
-<h2>✨ आज का Data</h2><div class="grid">
-<div class="card" data-page="current"><div class="icon">📰</div><div class="title">Daily Current Affairs</div><div class="muted">8 exam-focused updates</div></div>
-<div class="card" data-page="quiz"><div class="icon">📝</div><div class="title">Daily Quiz</div><div class="muted">8 MCQs with answers</div></div>
-<div class="card" data-page="videos"><div class="icon">🎥</div><div class="title">Video Lectures</div><div class="muted">Chapter-wise classes</div></div>
-<div class="card" data-page="shorts"><div class="icon">⚡</div><div class="title">Shorts</div><div class="muted">Quick revision</div></div></div>
-<h2>📚 Subjects</h2><div class="grid">
-<div class="card" data-msg="Geography section में India + MP Geography content जोड़ सकते हैं।"><div class="icon">🌍</div><div class="title">Geography</div></div>
-<div class="card" data-msg="Polity section में Constitution + Governance content जोड़ सकते हैं।"><div class="icon">🏛️</div><div class="title">Polity</div></div>
-<div class="card" data-msg="History section में Ancient, Medieval और Modern India content जोड़ सकते हैं।"><div class="icon">📜</div><div class="title">History</div></div>
-<div class="card" data-msg="Economics section में Banking, Budget, Inflation आदि जोड़ सकते हैं।"><div class="icon">💰</div><div class="title">Economics</div></div>
-<div class="card" data-msg="Science section में Physics, Chemistry और Biology content जोड़ सकते हैं।"><div class="icon">🔬</div><div class="title">Science</div></div>
-<div class="card" data-msg="MP GK section में MP History, Geography, Economy और Current Affairs जोड़ सकते हैं।"><div class="icon">🇮🇳</div><div class="title">MP GK</div></div>
-</div></section>
-
-<section id="current" class="page"><button class="back" data-page="home">← Home</button><h2>📰 Daily Current Affairs — 29 Sep 2026</h2>
-<div class="item">
-<span class="tag">SCIENCE &amp; TECH</span>
-<h3>MOI-1A Orbital Computing Satellite</h3><p>भारतीय space startup TakeMe2Space का MOI-1A orbital computing satellite 1 अक्टूबर 2026 को SpaceX के Transporter-18 rideshare mission से launch होने के लिए निर्धारित है। इसका लक्ष्य satellite पर ही data processing और AI-based computing करना है।</p>
-<div class="source">Source: Sanskriti IAS, 29 Sep 2026</div>
+<div class="hero-card"><h2>आज की तैयारी शुरू करें 🚀</h2><p>29 September 2026 • Current Affairs + Quiz + Lectures + Shorts</p><a class="btn" onclick="show('current')">आज का Current Affairs →</a></div>
+<h2 class="section">✨ आज का Data</h2>
+<div class="grid">
+<div class="card" onclick="show('current')"><div class="icon">📰</div><h3>Daily Current Affairs</h3><p>8 exam-focused updates</p></div>
+<div class="card" onclick="show('quiz')"><div class="icon">📝</div><h3>Daily Quiz</h3><p>8 MCQs with answers</p></div>
+<div class="card" onclick="show('videos')"><div class="icon">🎥</div><h3>Video Lectures</h3><p>Chapter-wise classes</p></div>
+<div class="card" onclick="show('shorts')"><div class="icon">⚡</div><h3>Shorts</h3><p>Quick revision</p></div>
 </div>
-<div class="item">
-<span class="tag">SPORTS</span>
-<h3>Asian Games 2026</h3><p>29 सितंबर 2026 की उपलब्ध रिपोर्ट के अनुसार Aichi-Nagoya Asian Games में भारत का medal tally 46 medals तक पहुँच चुका था।</p>
-<div class="source">Source: Vajiram &amp; Ravi, 29 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">SPORTS</span>
-<h3>Women’s Trap Team Silver</h3><p>भारत की महिला trap shooting team ने 29 सितंबर 2026 को Asian Games 2026 में silver medal जीता। टीम में Neeru Dhanda, Aashima Ahlawat और Manisha Keer शामिल थीं।</p>
-<div class="source">Source: GKToday, 29 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">ENVIRONMENT</span>
-<h3>First PRAMAAN Certificates</h3><p>29 सितंबर 2026 को Indian Forest and Wood Certification Scheme (IFWCS) के तहत भारत में पहले PRAMAAN certificates जारी किए गए।</p>
-<div class="source">Source: GKToday, 29 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">ECONOMY</span>
-<h3>Indian Markets</h3><p>29 सितंबर 2026 को rising crude-oil prices और global geopolitical concerns के बीच भारतीय शेयर बाजार में कमजोरी दर्ज हुई।</p>
-<div class="source">Source: Reuters, 29 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">INTERNATIONAL</span>
-<h3>India–US Trade Talks</h3><p>भारत के Trade Minister Piyush Goyal 29 सितंबर से 5 अक्टूबर 2026 तक अमेरिका की यात्रा पर हैं, जहाँ India–US Bilateral Trade Agreement पर वार्ता और G20 trade ministers’ meeting में भागीदारी का कार्यक्रम है।</p>
-<div class="source">Source: Reuters, 28 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">NATIONAL</span>
-<h3>UPI MDR Case</h3><p>29 सितंबर 2026 की रिपोर्ट के अनुसार Supreme Court ने UPI transactions पर Merchant Discount Rate (MDR) लगाए जाने के मामले में stay देने से इनकार किया।</p>
-<div class="source">Source: Indian Express, 29 Sep 2026</div>
-</div>
-<div class="item">
-<span class="tag">MP SPECIAL</span>
-<h3>मध्य प्रदेश — Sugam Parivahan</h3><p>मध्य प्रदेश के 11 सितंबर 2026 के current-affairs update के अनुसार मुख्यमंत्री मोहन यादव ने Mukhyamantri Sugam Parivahan Bus Seva को 25 सितंबर से शुरू करने की घोषणा की थी।</p>
-<div class="source">Source: Ujiyari, 11 Sep 2026</div>
-</div></section>
-
-<section id="quiz" class="page"><button class="back" data-page="home">← Home</button><h2>📝 Daily Quiz — 29 Sep 2026</h2><div class="item"><span class="tag">Q01</span><h3>MOI-1A किस प्रकार के mission से संबंधित है?</h3><p>A) Orbital computing satellite<br>B) Deep-sea mission<br>C) Lunar rover<br>D) Weather balloon</p><button class="btn answer" data-answer="A) Orbital computing satellite">उत्तर देखें</button></div><div class="item"><span class="tag">Q02</span><h3>Asian Games 2026 में 29 सितंबर तक भारत का reported medal tally कितना था?</h3><p>A) 36<br>B) 40<br>C) 46<br>D) 52</p><button class="btn answer" data-answer="C) 46">उत्तर देखें</button></div><div class="item"><span class="tag">Q03</span><h3>29 सितंबर 2026 को भारतीय महिला trap team ने कौन-सा पदक जीता?</h3><p>A) Gold<br>B) Silver<br>C) Bronze<br>D) कोई नहीं</p><button class="btn answer" data-answer="B) Silver">उत्तर देखें</button></div><div class="item"><span class="tag">Q04</span><h3>पहले PRAMAAN certificates किस scheme के तहत जारी हुए?</h3><p>A) IFWCS<br>B) PM-KISAN<br>C) PMFBY<br>D) AMRUT</p><button class="btn answer" data-answer="A) IFWCS">उत्तर देखें</button></div><div class="item"><span class="tag">Q05</span><h3>Piyush Goyal की US यात्रा की अवधि क्या बताई गई?</h3><p>A) 25–28 Sep<br>B) 29 Sep–5 Oct<br>C) 1–10 Oct<br>D) 5–12 Oct</p><button class="btn answer" data-answer="B) 29 Sep–5 Oct">उत्तर देखें</button></div><div class="item"><span class="tag">Q06</span><h3>UPI से संबंधित 29 Sep 2026 की खबर में Supreme Court ने किस पर stay से इनकार किया?</h3><p>A) UPI MDR<br>B) UPI PIN<br>C) UPI Lite<br>D) UPI QR</p><button class="btn answer" data-answer="A) UPI MDR">उत्तर देखें</button></div><div class="item"><span class="tag">Q07</span><h3>IFWCS का संबंध किस क्षेत्र से है?</h3><p>A) Forest and wood certification<br>B) Space launch<br>C) Banking<br>D) Railways</p><button class="btn answer" data-answer="A) Forest and wood certification">उत्तर देखें</button></div><div class="item"><span class="tag">Q08</span><h3>Mukhyamantri Sugam Parivahan Bus Seva किस राज्य से संबंधित है?</h3><p>A) Rajasthan<br>B) Madhya Pradesh<br>C) Gujarat<br>D) Maharashtra</p><button class="btn answer" data-answer="B) Madhya Pradesh">उत्तर देखें</button></div></section>
-
-<section id="videos" class="page"><button class="back" data-page="home">← Home</button><h2>🎥 Video Lectures</h2>
-<div class="item"><span class="tag">PHYSICS</span><h3>Reflection of Light</h3><p>Incident ray, normal, laws of reflection और spherical mirrors.</p><button class="btn" data-msg="Video link जोड़ने के लिए YouTube channel/video URL चाहिए।">▶ Lecture</button></div>
-<div class="item"><span class="tag">GEOGRAPHY</span><h3>भारत और मध्य प्रदेश के खनिज</h3><p>चट्टानें, खनिज, वितरण और exam-oriented facts.</p><button class="btn" data-msg="Video link जोड़ने के लिए YouTube channel/video URL चाहिए।">▶ Lecture</button></div></section>
-
-<section id="shorts" class="page"><button class="back" data-page="home">← Home</button>
-<h2>⚡ Ayush Education Shorts</h2>
-<div class="item">
-<span class="tag">YOUTUBE SHORT</span>
-<h3>⚡ Short 1</h3>
-<p>Ayush Education Shorts</p>
-<a class="btn" href="https://youtube.com/shorts/Zm22N_9xfUk" target="_blank" rel="noopener">▶ Short देखें</a>
-</div><div class="item">
-<span class="tag">YOUTUBE SHORT</span>
-<h3>⚡ Short 2</h3>
-<p>Ayush Education Shorts</p>
-<a class="btn" href="https://youtube.com/shorts/R-bt41aywUw" target="_blank" rel="noopener">▶ Short देखें</a>
-</div><div class="item">
-<span class="tag">YOUTUBE SHORT</span>
-<h3>⚡ Short 3</h3>
-<p>Ayush Education Shorts</p>
-<a class="btn" href="https://youtube.com/shorts/YZVYmSSiIbo" target="_blank" rel="noopener">▶ Short देखें</a>
-</div><div class="item">
-<span class="tag">YOUTUBE SHORT</span>
-<h3>⚡ Short 4</h3>
-<p>Ayush Education Shorts</p>
-<a class="btn" href="https://youtube.com/shorts/NAss1Y9FGgA" target="_blank" rel="noopener">▶ Short देखें</a>
+<h2 class="section">📚 Subjects</h2>
+<div class="subjects">
+<div class="subject" onclick="subject('Geography')"><div class="icon">🌍</div><h3>Geography</h3></div>
+<div class="subject" onclick="subject('Polity')"><div class="icon">🏛️</div><h3>Polity</h3></div>
+<div class="subject" onclick="subject('History')"><div class="icon">📜</div><h3>History</h3></div>
+<div class="subject" onclick="subject('Economics')"><div class="icon">💰</div><h3>Economics</h3></div>
+<div class="subject" onclick="subject('Science')"><div class="icon">🔬</div><h3>Science</h3></div>
+<div class="subject" onclick="subject('MP GK')"><div class="icon">🇮🇳</div><h3>MP GK</h3></div>
 </div>
 </section>
 
-<nav><button class="nav active" data-page="home"><span>⌂</span>Home</button><button class="nav" data-page="current"><span>📰</span>Current</button><button class="nav" data-page="quiz"><span>📝</span>Quiz</button><button class="nav" data-page="videos"><span>🎥</span>Videos</button><button class="nav" data-page="shorts"><span>⚡</span>Shorts</button></nav>
-<div id="toast" class="toast"></div></div>
+<section id="current" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">📰 Daily Current Affairs — 29 Sep 2026</h2><div id="currentList"></div></section>
+<section id="quiz" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">📝 Daily Quiz — 29 Sep 2026</h2><div id="quizList"></div></section>
+
+<section id="videos" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">🎥 Video Lectures</h2>
+<div class="card item"><div class="eyebrow">PHYSICS</div><h3>Reflection of Light</h3><p>Incident ray, normal, laws of reflection और spherical mirrors.</p><button class="btn" onclick="alert('Physics lecture link यहाँ जोड़ा जाएगा')">▶ Lecture</button></div>
+<div class="card item"><div class="eyebrow">GEOGRAPHY</div><h3>भारत और मध्य प्रदेश के खनिज</h3><p>चट्टानें, खनिज, वितरण और exam-oriented facts.</p><button class="btn" onclick="alert('Geography lecture link यहाँ जोड़ा जाएगा')">▶ Lecture</button></div>
+</section>
+
+<section id="shorts" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">⚡ Ayush Education Shorts</h2><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/Zm22N_9xfUk/hqdefault.jpg" alt="Short 1 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 1</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/Zm22N_9xfUk" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/R-bt41aywUw/hqdefault.jpg" alt="Short 2 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 2</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/R-bt41aywUw" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/YZVYmSSiIbo/hqdefault.jpg" alt="Short 3 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 3</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/YZVYmSSiIbo" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/NAss1Y9FGgA/hqdefault.jpg" alt="Short 4 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 4</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/NAss1Y9FGgA" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article></section>
+
+<section id="subjectPage" class="page"><a class="back" onclick="show('home')">← Home</a><div class="hero-card"><h2 id="subjectTitle">📚 Subject</h2><p>इस subject के chapters, notes, MCQs और videos यहाँ मिलेंगे।</p></div><div class="card item"><h3>📝 Practice MCQs</h3><p>Subject-wise exam questions और explanations.</p></div><div class="card item"><h3>🎥 Video Classes</h3><p>Chapter-wise lectures.</p></div><div class="card item"><h3>📖 Notes</h3><p>Short notes और revision material.</p></div></section>
+</main>
+<div class="ai" onclick="alert('AI Study Assistant जल्द जोड़ा जाएगा 🤖')">◉</div>
+<nav class="bottom">
+<div class="nav active" data-page="home" onclick="show('home')"><b>⌂</b>Home</div>
+<div class="nav" data-page="current" onclick="show('current')"><b>📰</b>Current</div>
+<div class="nav" data-page="quiz" onclick="show('quiz')"><b>📝</b>Quiz</div>
+<div class="nav" data-page="videos" onclick="show('videos')"><b>🎥</b>Videos</div>
+<div class="nav" data-page="shorts" onclick="show('shorts')"><b>⚡</b>Shorts</div>
+</nav>
 <script>
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const page=document.getElementById(id);if(page)page.classList.add('active');document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'})}
-document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',()=>showPage(el.dataset.page)));
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
-document.querySelectorAll('[data-msg]').forEach(el=>el.addEventListener('click',()=>toast(el.dataset.msg)));
-document.querySelectorAll('.answer').forEach(el=>el.addEventListener('click',()=>toast(el.dataset.answer)));
-document.getElementById('search').addEventListener('click',()=>toast('Search में Current Affairs, Quiz और Subjects को खोजने की सुविधा आगे जोड़ेंगे।'));
-</script></body></html>
+const current=[
+['SCIENCE & TECH','MOI-1A Orbital Computing Satellite','भारतीय space startup TakeMe2Space का MOI-1A orbital computing satellite 1 अक्टूबर 2026 को SpaceX के Transporter-18 rideshare mission से launch होने के लिए निर्धारित है।','Sanskriti IAS, 29 Sep 2026'],
+['SPORTS','Asian Games 2026','29 सितंबर 2026 की उपलब्ध रिपोर्ट के अनुसार Aichi-Nagoya Asian Games में भारत का medal tally 46 medals तक पहुँच चुका था।','Vajiram & Ravi, 29 Sep 2026'],
+['SPORTS','Women’s Trap Team Silver','भारत की महिला trap shooting team ने 29 सितंबर 2026 को Asian Games 2026 में silver medal जीता।','GKToday, 29 Sep 2026'],
+['ENVIRONMENT','First PRAMAAN Certificates','29 सितंबर 2026 को Indian Forest and Wood Certification Scheme (IFWCS) के तहत भारत में पहले PRAMAAN certificates जारी किए गए।','Current Affairs, 29 Sep 2026'],
+['ECONOMY','Indian Markets','भारतीय शेयर बाजार से जुड़ी प्रमुख economic developments exam perspective से महत्वपूर्ण हैं।','Daily Exam Update, 29 Sep 2026'],
+['INTERNATIONAL','India-US Trade Talks','भारत-अमेरिका व्यापार वार्ता से जुड़े हालिया developments current affairs का हिस्सा हैं।','Daily Current Affairs, 29 Sep 2026'],
+['NATIONAL','UPI MDR Case','UPI transactions और MDR से जुड़े policy तथा legal developments महत्वपूर्ण exam topics हैं।','Daily Exam Update, 29 Sep 2026'],
+['MP SPECIAL','Mukhyamantri Sugam Parivahan','मध्य प्रदेश से जुड़े परिवहन और public-service initiatives प्रतियोगी परीक्षाओं के लिए महत्वपूर्ण हैं।','MP Current Affairs, 29 Sep 2026']
+];
+const quiz=[
+['MOI-1A किस प्रकार के mission से संबंधित है?',['A) Orbital computing satellite','B) Deep-sea mission','C) Lunar rover','D) Weather balloon'],'A) Orbital computing satellite'],
+['Asian Games 2026 में 29 सितंबर तक भारत का reported medal tally कितना था?',['A) 36','B) 40','C) 46','D) 52'],'C) 46'],
+['भारत की महिला trap team ने Asian Games 2026 में कौन सा medal जीता?',['A) Gold','B) Silver','C) Bronze','D) कोई medal नहीं'],'B) Silver'],
+['PRAMAAN certificates किस scheme से संबंधित हैं?',['A) IFWCS','B) PM-KISAN','C) UJALA','D) PMFBY'],'A) IFWCS'],
+['MOI-1A का प्रमुख उद्देश्य क्या है?',['A) On-orbit computing','B) Weather forecasting only','C) Deep sea mapping','D) Road transport'],'A) On-orbit computing'],
+['Asian Games 2026 किस शहर/क्षेत्र में आयोजित हो रहे हैं?',['A) Aichi-Nagoya','B) Delhi','C) Mumbai','D) Seoul'],'A) Aichi-Nagoya'],
+['PRAMAAN certificates किस क्षेत्र से जुड़े हैं?',['A) Forest and wood certification','B) Banking','C) Railways','D) Telecom'],'A) Forest and wood certification'],
+['Daily current affairs पढ़ने का मुख्य लाभ क्या है?',['A) Exam awareness बढ़ाना','B) केवल मनोरंजन','C) केवल gaming','D) कोई नहीं'],'A) Exam awareness बढ़ाना']
+];
+function render(){
+document.getElementById('currentList').innerHTML=current.map(x=>`<article class="card item"><div class="eyebrow">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p><small>${x[3]}</small></article>`).join('');
+document.getElementById('quizList').innerHTML=quiz.map((x,i)=>`<article class="card item"><div class="eyebrow">Q${String(i+1).padStart(2,'0')}</div><h3>${x[0]}</h3><div class="quiz-options">${x[1].map(o=>`<div>${o}</div>`).join('')}</div><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ सही उत्तर: ${x[2]}</div></article>`).join('');
+}
+function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page===id));scrollTo({top:0,behavior:'smooth'});}
+function subject(n){document.getElementById('subjectTitle').textContent='📚 '+n;show('subjectPage')}
+render();
+</script>
+</body></html>
