@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#7046ff">
+<title>Ayush Education</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#090b24;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding-bottom:82px}
+a{text-decoration:none;color:inherit}.hero{padding:38px 20px 30px;border-radius:0 0 34px 34px;background:linear-gradient(135deg,#6840ff,#a83cff 50%,#08c8ef);box-shadow:0 18px 50px #4320a955}
+.brand{font-size:35px;font-weight:900}.tag{font-size:18px;margin-top:2px}.search{margin-top:22px;padding:17px 18px;border:1px solid #ffffff55;border-radius:20px;background:#ffffff16;font-size:18px}
+.wrap{max-width:900px;margin:auto;padding:20px 18px}.page{display:none}.page.active{display:block}.hero-card,.card,.subject,.short-card{background:linear-gradient(145deg,#2d2858ee,#161832f5);border:1px solid #ffffff18;border-radius:26px;box-shadow:0 12px 30px #0003}
+.hero-card{padding:24px;margin-bottom:25px}.hero-card h2{margin:0 0 8px;font-size:27px}.hero-card p,.card p,.subject p,.short-body p{color:#c4c0d2;line-height:1.55}
+h2.section{font-size:27px;margin:25px 2px 14px}.grid,.subjects{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card,.subject{padding:20px;min-height:145px}.icon{font-size:38px}.card h3,.subject h3{font-size:21px;margin:9px 0 4px}
+.btn{display:inline-block;background:#fff;color:#5535b8;font-weight:800;padding:12px 18px;border-radius:15px;margin-top:12px;border:0}.back{display:inline-block;background:#ffffff12;padding:12px 17px;border-radius:15px;margin-bottom:12px}
+.item{margin:14px 0;min-height:auto}.eyebrow,.short-body small{color:#bcb0ff;font-weight:800;letter-spacing:.7px}.item h3{font-size:21px}.answer{display:none;margin-top:12px;padding:12px;border-radius:14px;background:#36d78420;color:#aaffcf}.quiz-options div{margin:8px 0;color:#d5d1df}
+.short-card{overflow:hidden;margin:16px 0;display:grid;grid-template-columns:40% 60%}.thumb{position:relative;min-height:220px;background:#111}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.thumb span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#7046ffdd;font-size:22px;box-shadow:0 0 25px #7046ff}.short-body{padding:22px}.short-body h3{font-size:23px;margin:8px 0}.bottom{position:fixed;bottom:0;left:0;right:0;height:76px;background:#090a20ee;backdrop-filter:blur(18px);border-top:1px solid #ffffff14;display:grid;grid-template-columns:repeat(5,1fr);z-index:10}.nav{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#999;font-size:12px;gap:4px}.nav b{font-size:23px}.nav.active{color:#fff;text-shadow:0 0 15px #8a68ff}.ai{position:fixed;right:0;top:155px;width:58px;height:58px;border-radius:22px 0 0 22px;background:#ffffffdd;color:#111;display:grid;place-items:center;font-size:27px;z-index:11}
+@media(max-width:650px){.short-card{grid-template-columns:1fr}.thumb{height:215px}.brand{font-size:33px}}
+
+.geo-topic{margin:18px 0;padding:22px;border-radius:26px;background:linear-gradient(145deg,#25234d,#14162f);border:1px solid #ffffff18;box-shadow:0 12px 30px #0003}
+.geo-topic h3{font-size:24px;margin:0 0 8px}.geo-topic h4{font-size:19px;margin:20px 0 8px;color:#d5caff}.geo-topic p,.geo-topic li{color:#d2cfdf;line-height:1.7}.geo-topic ul{padding-left:21px}.diagram{margin:16px 0;padding:12px;border-radius:20px;background:#0d1027;border:1px solid #ffffff12;overflow:hidden}.diagram svg{width:100%;height:auto;display:block}.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{padding:13px;border-radius:16px;background:#ffffff08;border:1px solid #ffffff10}.fact b{display:block;color:#bdb0ff;margin-bottom:4px}.mcq{margin:12px 0;padding:17px;border-radius:20px;background:#ffffff07;border:1px solid #ffffff12}.mcq h4{margin:0 0 9px;color:#fff}.mcq label{display:block;padding:9px 10px;margin:6px 0;border-radius:12px;background:#ffffff06;color:#d9d6e5}.mcq .answer{display:none}.mini-note{padding:13px 15px;border-left:4px solid #8c6cff;background:#ffffff08;border-radius:12px;color:#d8d5e2}.topic-nav{display:flex;gap:8px;overflow:auto;padding:3px 0 8px}.topic-nav a{white-space:nowrap;padding:10px 13px;border-radius:14px;background:#ffffff0d;border:1px solid #ffffff12;color:#ddd}.show-answer{cursor:pointer}
+@media(max-width:650px){.fact-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="hero"><div class="brand">🎓 Ayush Education</div><div class="tag">Smart • Modern • Exam Preparation</div><div class="search">🔎 Current Affairs, Quiz, Subject खोजें...</div></header>
+<main class="wrap">
+
+<section id="home" class="page active">
+<div class="hero-card"><h2>आज की तैयारी शुरू करें 🚀</h2><p>29 September 2026 • Current Affairs + Quiz + Lectures + Shorts</p><a class="btn" onclick="show('current')">आज का Current Affairs →</a></div>
+<h2 class="section">✨ आज का Data</h2>
+<div class="grid">
+<div class="card" onclick="show('current')"><div class="icon">📰</div><h3>Daily Current Affairs</h3><p>8 exam-focused updates</p></div>
+<div class="card" onclick="show('quiz')"><div class="icon">📝</div><h3>Daily Quiz</h3><p>8 MCQs with answers</p></div>
+<div class="card" onclick="show('videos')"><div class="icon">🎥</div><h3>Video Lectures</h3><p>Chapter-wise classes</p></div>
+<div class="card" onclick="show('shorts')"><div class="icon">⚡</div><h3>Shorts</h3><p>Quick revision</p></div>
+</div>
+<h2 class="section">📚 Subjects</h2>
+<div class="subjects">
+<div class="subject" onclick="subject('Geography')"><div class="icon">🌍</div><h3>Geography</h3></div>
+<div class="subject" onclick="subject('Polity')"><div class="icon">🏛️</div><h3>Polity</h3></div>
+<div class="subject" onclick="subject('History')"><div class="icon">📜</div><h3>History</h3></div>
+<div class="subject" onclick="subject('Economics')"><div class="icon">💰</div><h3>Economics</h3></div>
+<div class="subject" onclick="subject('Science')"><div class="icon">🔬</div><h3>Science</h3></div>
+<div class="subject" onclick="subject('MP GK')"><div class="icon">🇮🇳</div><h3>MP GK</h3></div>
+</div>
+</section>
+
+<section id="current" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">📰 Daily Current Affairs — 29 Sep 2026</h2><div id="currentList"></div></section>
+<section id="quiz" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">📝 Daily Quiz — 29 Sep 2026</h2><div id="quizList"></div></section>
+
+<section id="videos" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">🎥 Video Lectures</h2>
+<div class="card item"><div class="eyebrow">PHYSICS</div><h3>Reflection of Light</h3><p>Incident ray, normal, laws of reflection और spherical mirrors.</p><button class="btn" onclick="alert('Physics lecture link यहाँ जोड़ा जाएगा')">▶ Lecture</button></div>
+<div class="card item"><div class="eyebrow">GEOGRAPHY</div><h3>भारत और मध्य प्रदेश के खनिज</h3><p>चट्टानें, खनिज, वितरण और exam-oriented facts.</p><button class="btn" onclick="alert('Geography lecture link यहाँ जोड़ा जाएगा')">▶ Lecture</button></div>
+</section>
+
+<section id="shorts" class="page"><a class="back" onclick="show('home')">← Home</a><h2 class="section">⚡ Ayush Education Shorts</h2><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/Zm22N_9xfUk/hqdefault.jpg" alt="Short 1 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 1</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/Zm22N_9xfUk" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/R-bt41aywUw/hqdefault.jpg" alt="Short 2 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 2</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/R-bt41aywUw" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/YZVYmSSiIbo/hqdefault.jpg" alt="Short 3 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 3</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/YZVYmSSiIbo" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article><article class="short-card">
+<div class="thumb"><img src="https://img.youtube.com/vi/NAss1Y9FGgA/hqdefault.jpg" alt="Short 4 thumbnail"><span>▶</span></div>
+<div class="short-body"><small>YOUTUBE SHORT</small><h3>⚡ Short 4</h3><p>Ayush Education • Quick revision</p>
+<a class="btn" href="https://youtube.com/shorts/NAss1Y9FGgA" target="_blank" rel="noopener">▶ Short देखें</a></div>
+</article></section>
+
+<section id="subjectPage" class="page">
+<a class="back" onclick="show('home')">← Home</a>
+<div class="hero-card"><h2 id="subjectTitle">📚 Subject</h2><p id="subjectIntro">Subject-wise detailed notes, diagrams, MCQs और revision.</p></div>
+<div id="subjectContent"></div>
+</section>
+</main>
+<div class="ai" onclick="alert('AI Study Assistant जल्द जोड़ा जाएगा 🤖')">◉</div>
+<nav class="bottom">
+<div class="nav active" data-page="home" onclick="show('home')"><b>⌂</b>Home</div>
+<div class="nav" data-page="current" onclick="show('current')"><b>📰</b>Current</div>
+<div class="nav" data-page="quiz" onclick="show('quiz')"><b>📝</b>Quiz</div>
+<div class="nav" data-page="videos" onclick="show('videos')"><b>🎥</b>Videos</div>
+<div class="nav" data-page="shorts" onclick="show('shorts')"><b>⚡</b>Shorts</div>
+</nav>
+<script>
+const current=[
+['SCIENCE & TECH','MOI-1A Orbital Computing Satellite','भारतीय space startup TakeMe2Space का MOI-1A orbital computing satellite 1 अक्टूबर 2026 को SpaceX के Transporter-18 rideshare mission से launch होने के लिए निर्धारित है।','Sanskriti IAS, 29 Sep 2026'],
+['SPORTS','Asian Games 2026','29 सितंबर 2026 की उपलब्ध रिपोर्ट के अनुसार Aichi-Nagoya Asian Games में भारत का medal tally 46 medals तक पहुँच चुका था।','Vajiram & Ravi, 29 Sep 2026'],
+['SPORTS','Women’s Trap Team Silver','भारत की महिला trap shooting team ने 29 सितंबर 2026 को Asian Games 2026 में silver medal जीता।','GKToday, 29 Sep 2026'],
+['ENVIRONMENT','First PRAMAAN Certificates','29 सितंबर 2026 को Indian Forest and Wood Certification Scheme (IFWCS) के तहत भारत में पहले PRAMAAN certificates जारी किए गए।','Current Affairs, 29 Sep 2026'],
+['ECONOMY','Indian Markets','भारतीय शेयर बाजार से जुड़ी प्रमुख economic developments exam perspective से महत्वपूर्ण हैं।','Daily Exam Update, 29 Sep 2026'],
+['INTERNATIONAL','India-US Trade Talks','भारत-अमेरिका व्यापार वार्ता से जुड़े हालिया developments current affairs का हिस्सा हैं।','Daily Current Affairs, 29 Sep 2026'],
+['NATIONAL','UPI MDR Case','UPI transactions और MDR से जुड़े policy तथा legal developments महत्वपूर्ण exam topics हैं।','Daily Exam Update, 29 Sep 2026'],
+['MP SPECIAL','Mukhyamantri Sugam Parivahan','मध्य प्रदेश से जुड़े परिवहन और public-service initiatives प्रतियोगी परीक्षाओं के लिए महत्वपूर्ण हैं।','MP Current Affairs, 29 Sep 2026']
+];
+const quiz=[
+['MOI-1A किस प्रकार के mission से संबंधित है?',['A) Orbital computing satellite','B) Deep-sea mission','C) Lunar rover','D) Weather balloon'],'A) Orbital computing satellite'],
+['Asian Games 2026 में 29 सितंबर तक भारत का reported medal tally कितना था?',['A) 36','B) 40','C) 46','D) 52'],'C) 46'],
+['भारत की महिला trap team ने Asian Games 2026 में कौन सा medal जीता?',['A) Gold','B) Silver','C) Bronze','D) कोई medal नहीं'],'B) Silver'],
+['PRAMAAN certificates किस scheme से संबंधित हैं?',['A) IFWCS','B) PM-KISAN','C) UJALA','D) PMFBY'],'A) IFWCS'],
+['MOI-1A का प्रमुख उद्देश्य क्या है?',['A) On-orbit computing','B) Weather forecasting only','C) Deep sea mapping','D) Road transport'],'A) On-orbit computing'],
+['Asian Games 2026 किस शहर/क्षेत्र में आयोजित हो रहे हैं?',['A) Aichi-Nagoya','B) Delhi','C) Mumbai','D) Seoul'],'A) Aichi-Nagoya'],
+['PRAMAAN certificates किस क्षेत्र से जुड़े हैं?',['A) Forest and wood certification','B) Banking','C) Railways','D) Telecom'],'A) Forest and wood certification'],
+['Daily current affairs पढ़ने का मुख्य लाभ क्या है?',['A) Exam awareness बढ़ाना','B) केवल मनोरंजन','C) केवल gaming','D) कोई नहीं'],'A) Exam awareness बढ़ाना']
+];
+function render(){
+document.getElementById('currentList').innerHTML=current.map(x=>`<article class="card item"><div class="eyebrow">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p><small>${x[3]}</small></article>`).join('');
+document.getElementById('quizList').innerHTML=quiz.map((x,i)=>`<article class="card item"><div class="eyebrow">Q${String(i+1).padStart(2,'0')}</div><h3>${x[0]}</h3><div class="quiz-options">${x[1].map(o=>`<div>${o}</div>`).join('')}</div><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ सही उत्तर: ${x[2]}</div></article>`).join('');
+}
+function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.page===id));scrollTo({top:0,behavior:'smooth'});}
+
+const geoContent = `
+<div class="topic-nav">
+<a href="#geo-earth">1️⃣ पृथ्वी की आंतरिक संरचना</a>
+<a href="#geo-rocks">2️⃣ चट्टानें व शैल चक्र</a>
+<a href="#geo-india">3️⃣ भारत की भौतिक संरचना</a>
+</div>
+
+<article class="geo-topic" id="geo-earth">
+<h3>1️⃣ पृथ्वी की आंतरिक संरचना</h3>
+<p>पृथ्वी को मुख्यतः <b>भूपर्पटी (Crust), मैंटल (Mantle) और क्रोड (Core)</b> में बाँटा जाता है। प्रतियोगी परीक्षाओं में गहराई, संरचना, तापमान और घनत्व से जुड़े प्रश्न बार-बार पूछे जाते हैं।</p>
+
+<div class="diagram">
+<svg viewBox="0 0 700 430" role="img" aria-label="पृथ्वी की आंतरिक संरचना का diagram">
+<defs><radialGradient id="earthG"><stop offset="0" stop-color="#fff08a"/><stop offset=".35" stop-color="#ff9f43"/><stop offset=".68" stop-color="#d94d4d"/><stop offset=".9" stop-color="#8d4b9e"/><stop offset="1" stop-color="#314b9b"/></radialGradient></defs>
+<circle cx="350" cy="215" r="180" fill="url(#earthG)" stroke="#fff" stroke-width="4"/>
+<circle cx="350" cy="215" r="72" fill="#ffe66d" stroke="#fff" stroke-width="3"/>
+<circle cx="350" cy="215" r="45" fill="#ff7b39" stroke="#fff" stroke-width="3"/>
+<path d="M350 35 L350 215" stroke="#fff" stroke-width="2" stroke-dasharray="7 7"/>
+<line x1="510" y1="90" x2="620" y2="55" stroke="#fff" stroke-width="2"/><text x="625" y="58" fill="#fff" font-size="20">भूपर्पटी</text>
+<line x1="485" y1="145" x2="620" y2="125" stroke="#fff" stroke-width="2"/><text x="625" y="130" fill="#fff" font-size="20">मैंटल</text>
+<line x1="395" y1="185" x2="620" y2="195" stroke="#fff" stroke-width="2"/><text x="625" y="200" fill="#fff" font-size="20">बाह्य क्रोड</text>
+<line x1="382" y1="225" x2="620" y2="270" stroke="#fff" stroke-width="2"/><text x="625" y="276" fill="#fff" font-size="20">आंतरिक क्रोड</text>
+<text x="255" y="405" fill="#cfc9ff" font-size="19">पृथ्वी का सरल cross-section</text>
+</svg>
+</div>
+
+<div class="fact-grid">
+<div class="fact"><b>भूपर्पटी</b>सबसे बाहरी ठोस परत; महाद्वीपीय व महासागरीय प्रकार।</div>
+<div class="fact"><b>मैंटल</b>भूपर्पटी के नीचे सबसे मोटी परत; संवहन धाराएँ महत्वपूर्ण।</div>
+<div class="fact"><b>बाह्य क्रोड</b>मुख्यतः द्रव अवस्था; पृथ्वी के चुंबकीय क्षेत्र से संबंधित।</div>
+<div class="fact"><b>आंतरिक क्रोड</b>बहुत अधिक दाब के कारण ठोस; मुख्यतः लौह-निकेल।</div>
+</div>
+
+<h4>📌 Exam Notes</h4>
+<ul>
+<li>भूपर्पटी और मैंटल की सीमा को <b>मोहोरोविसिक असांतत्य (Moho)</b> कहा जाता है।</li>
+<li>मैंटल में ताप और दाब के कारण पदार्थ की धीमी गति/संवहन प्लेट विवर्तनिकी के लिए महत्वपूर्ण है।</li>
+<li>क्रोड में लौह और निकेल की प्रधानता मानी जाती है।</li>
+<li>भूकंपीय तरंगों के व्यवहार से पृथ्वी की आंतरिक संरचना के बारे में जानकारी मिलती है।</li>
+</ul>
+
+<h4>📝 Practice MCQs</h4>
+<div class="mcq"><h4>Q1. पृथ्वी की सबसे बाहरी प्रमुख परत कौन-सी है?</h4><label>A) मैंटल</label><label>B) भूपर्पटी</label><label>C) बाह्य क्रोड</label><label>D) आंतरिक क्रोड</label><button class="btn show-answer" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) भूपर्पटी</div></div>
+<div class="mcq"><h4>Q2. Moho किसकी सीमा को दर्शाता है?</h4><label>A) मैंटल-क्रोड</label><label>B) भूपर्पटी-मैंटल</label><label>C) बाह्य-आंतरिक क्रोड</label><label>D) वायुमंडल-भूपर्पटी</label><button class="btn show-answer" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) भूपर्पटी-मैंटल</div></div>
+<div class="mcq"><h4>Q3. पृथ्वी का कौन-सा क्रोड मुख्यतः द्रव माना जाता है?</h4><label>A) आंतरिक क्रोड</label><label>B) बाह्य क्रोड</label><label>C) मैंटल</label><label>D) भूपर्पटी</label><button class="btn show-answer" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) बाह्य क्रोड</div></div>
+</article>
+
+<article class="geo-topic" id="geo-rocks">
+<h3>2️⃣ चट्टानें एवं शैल चक्र</h3>
+<p>चट्टानें पृथ्वी की भूपर्पटी के प्रमुख घटक हैं। उत्पत्ति के आधार पर इन्हें <b>आग्नेय, अवसादी और कायांतरित</b> चट्टानों में बाँटा जाता है। एक प्रकार की चट्टान भूगर्भीय प्रक्रियाओं से दूसरे प्रकार में बदल सकती है—इसे <b>शैल चक्र (Rock Cycle)</b> कहते हैं।</p>
+
+<div class="diagram">
+<svg viewBox="0 0 760 430" role="img" aria-label="शैल चक्र diagram">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#b9a7ff"/></marker></defs>
+<rect x="285" y="25" width="190" height="65" rx="18" fill="#343a83"/><text x="380" y="65" text-anchor="middle" fill="#fff" font-size="20">मैग्मा</text>
+<rect x="40" y="175" width="190" height="75" rx="18" fill="#7a4b38"/><text x="135" y="205" text-anchor="middle" fill="#fff" font-size="18">आग्नेय चट्टान</text><text x="135" y="230" text-anchor="middle" fill="#ddd" font-size="15">ठंडा होकर जमना</text>
+<rect x="285" y="175" width="190" height="75" rx="18" fill="#496d45"/><text x="380" y="205" text-anchor="middle" fill="#fff" font-size="18">अवसादी चट्टान</text><text x="380" y="230" text-anchor="middle" fill="#ddd" font-size="15">अवसादन/संघनन</text>
+<rect x="530" y="175" width="190" height="75" rx="18" fill="#754c86"/><text x="625" y="205" text-anchor="middle" fill="#fff" font-size="18">कायांतरित चट्टान</text><text x="625" y="230" text-anchor="middle" fill="#ddd" font-size="15">ताप + दाब</text>
+<rect x="285" y="335" width="190" height="60" rx="18" fill="#8a4d38"/><text x="380" y="372" text-anchor="middle" fill="#fff" font-size="18">अपक्षय → अवसाद</text>
+<path d="M330 90 C250 115 180 130 145 170" fill="none" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M230 212 L280 212" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M475 212 L525 212" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M625 250 C600 310 500 340 475 355" fill="none" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M285 365 C210 350 130 315 125 255" fill="none" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M530 175 C500 125 470 100 445 90" fill="none" stroke="#b9a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="20" y="410" fill="#cfc9ff" font-size="17">शैल चक्र: चट्टानों का निरंतर परिवर्तन</text>
+</svg>
+</div>
+
+<h4>📌 तीन प्रमुख प्रकार</h4>
+<ul>
+<li><b>आग्नेय:</b> मैग्मा/लावा के ठंडा होने से बनती हैं। उदाहरण—ग्रेनाइट, बेसाल्ट।</li>
+<li><b>अवसादी:</b> अवसाद के निक्षेपण, संघनन और सीमेंटेशन से बनती हैं। उदाहरण—बलुआ पत्थर, चूना पत्थर।</li>
+<li><b>कायांतरित:</b> पहले से मौजूद चट्टानों पर ताप, दाब और रासायनिक प्रभाव से परिवर्तन। उदाहरण—चूना पत्थर → संगमरमर, शेल → स्लेट।</li>
+</ul>
+
+<div class="mini-note">🎯 Exam Trick: <b>Granite = आग्नेय, Sandstone = अवसादी, Marble = कायांतरित</b> — इन जोड़ों को जरूर याद रखें।</div>
+
+<h4>📝 Practice MCQs</h4>
+<div class="mcq"><h4>Q1. ग्रेनाइट किस प्रकार की चट्टान है?</h4><label>A) अवसादी</label><label>B) आग्नेय</label><label>C) कायांतरित</label><label>D) जैविक</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) आग्नेय</div></div>
+<div class="mcq"><h4>Q2. चूना पत्थर के कायांतरण से सामान्यतः क्या बनता है?</h4><label>A) बेसाल्ट</label><label>B) ग्रेनाइट</label><label>C) संगमरमर</label><label>D) स्लेट</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ C) संगमरमर</div></div>
+<div class="mcq"><h4>Q3. बलुआ पत्थर किस प्रकार की चट्टान है?</h4><label>A) अवसादी</label><label>B) आग्नेय</label><label>C) कायांतरित</label><label>D) ज्वालामुखीय कांच</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ A) अवसादी</div></div>
+</article>
+
+<article class="geo-topic" id="geo-india">
+<h3>3️⃣ भारत की भौतिक संरचना</h3>
+<p>भारत की स्थलाकृति को सामान्यतः <b>हिमालय, उत्तरी मैदान, प्रायद्वीपीय पठार, भारतीय मरुस्थल, तटीय मैदान और द्वीप समूह</b> जैसे प्रमुख भौतिक भागों में समझा जाता है।</p>
+
+<div class="diagram">
+<svg viewBox="0 0 760 400" role="img" aria-label="भारत की भौतिक संरचना का schematic diagram">
+<path d="M90 250 Q180 210 260 235 T410 230 Q500 205 660 250 L660 330 L90 330Z" fill="#3d6b9c"/>
+<path d="M105 245 Q175 170 245 235 L285 265 L105 265Z" fill="#e9e1a0"/>
+<path d="M250 245 Q350 205 460 245 L510 295 L245 295Z" fill="#8b5a42"/>
+<path d="M460 245 Q540 220 650 250 L650 300 L470 300Z" fill="#d4a24c"/>
+<path d="M130 220 L160 175 L190 215 L220 160 L250 215 L280 180 L315 225" fill="none" stroke="#fff" stroke-width="15"/>
+<path d="M130 220 L160 175 L190 215 L220 160 L250 215 L280 180 L315 225" fill="none" stroke="#b9d6ff" stroke-width="7"/>
+<text x="145" y="125" fill="#fff" font-size="19">हिमालय</text>
+<text x="125" y="292" fill="#222" font-size="17">उत्तरी मैदान</text>
+<text x="315" y="275" fill="#fff" font-size="17">प्रायद्वीपीय पठार</text>
+<text x="520" y="275" fill="#222" font-size="17">मरुस्थल</text>
+<text x="570" y="350" fill="#cfc9ff" font-size="17">सांकेतिक भौतिक प्रदेश</text>
+</svg>
+</div>
+
+<h4>📌 Exam Notes</h4>
+<ul>
+<li><b>हिमालय:</b> युवा वलित पर्वत; उत्तर भारत की जलवायु और नदी प्रणालियों पर गहरा प्रभाव।</li>
+<li><b>उत्तरी मैदान:</b> सिंधु, गंगा और ब्रह्मपुत्र नदी तंत्रों द्वारा लाए गए जलोढ़ निक्षेपों से बने विस्तृत मैदान।</li>
+<li><b>प्रायद्वीपीय पठार:</b> प्राचीन कठोर भूभाग; खनिज संसाधनों की दृष्टि से महत्वपूर्ण।</li>
+<li><b>भारतीय मरुस्थल:</b> मुख्यतः पश्चिमी राजस्थान में; कम वर्षा और मरुस्थलीय परिस्थितियाँ।</li>
+<li><b>तटीय मैदान:</b> पश्चिमी तट अपेक्षाकृत संकरा, जबकि पूर्वी तट कई स्थानों पर अधिक चौड़ा और डेल्टाई मैदानों से जुड़ा है।</li>
+<li><b>द्वीप समूह:</b> अंडमान-निकोबार बंगाल की खाड़ी में और लक्षद्वीप अरब सागर में स्थित है।</li>
+</ul>
+
+<h4>📝 Practice MCQs</h4>
+<div class="mcq"><h4>Q1. उत्तरी मैदान मुख्यतः किस प्रकार के निक्षेप से बने हैं?</h4><label>A) लावा</label><label>B) जलोढ़</label><label>C) हिमानी चट्टान</label><label>D) प्रवाल</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) जलोढ़</div></div>
+<div class="mcq"><h4>Q2. प्रायद्वीपीय पठार की प्रमुख विशेषता क्या है?</h4><label>A) अत्यंत युवा वलित पर्वत</label><label>B) प्राचीन कठोर भूभाग</label><label>C) केवल जलोढ़ मिट्टी</label><label>D) पूर्णतः रेतीला क्षेत्र</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) प्राचीन कठोर भूभाग</div></div>
+<div class="mcq"><h4>Q3. लक्षद्वीप किस समुद्र में स्थित है?</h4><label>A) बंगाल की खाड़ी</label><label>B) अरब सागर</label><label>C) लाल सागर</label><label>D) भूमध्य सागर</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) अरब सागर</div></div>
+<div class="mcq"><h4>Q4. अंडमान-निकोबार द्वीप समूह किस जल क्षेत्र में है?</h4><label>A) अरब सागर</label><label>B) बंगाल की खाड़ी</label><label>C) कैस्पियन सागर</label><label>D) काला सागर</label><button class="btn" onclick="this.nextElementSibling.style.display='block'">उत्तर देखें</button><div class="answer">✅ B) बंगाल की खाड़ी</div></div>
+</article>
+`;
+
+const genericSubject = (n) => `
+<div class="geo-topic"><h3>📝 ${n} — Practice</h3><p>इस subject के chapter-wise notes, diagrams, MCQs और video classes आगे जोड़े जाएंगे।</p></div>
+<div class="geo-topic"><h3>📖 Notes</h3><p>Exam-oriented short notes और revision points.</p></div>
+`;
+
+function subject(n){
+  document.getElementById('subjectTitle').textContent='📚 '+n;
+  document.getElementById('subjectIntro').textContent = n==='Geography' ? '3 detailed topics • Diagrams • Notes • Practice MCQs' : 'Subject-wise detailed notes, MCQs और revision.';
+  document.getElementById('subjectContent').innerHTML = n==='Geography' ? geoContent : genericSubject(n);
+  show('subjectPage');
+}
+render();
+</script>
+</body></html>
