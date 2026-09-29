@@ -1,0 +1,9 @@
+{
+  "name": "Ayush Education",
+  "short_name": "Ayush Education",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080817",
+  "theme_color": "#6d4aff",
+  "description": "Ayush Education - Smart Exam Preparation"
+}
